@@ -64,3 +64,81 @@ ownership.
 Just for clarification, an item can never have its `quality` increase above 50,
 however "Sulfuras" is a legendary item and as such its `quality` is 80 and it
 never alters.
+
+### 2-original-code.ts
+```typescript
+export class Item {
+  constructor(public name: string, public sellIn: number, public quality: number) {}
+}
+
+export class GildedRose {
+  items: Array<Item>;
+
+  constructor(items = [] as Array<Item>) {
+    this.items = items;
+  }
+
+  updateQuality() {
+    for (let i = 0; i < this.items.length; i++) {
+      if (this.items[i].name != 'Aged Brie' && this.items[i].name != 'Backstage passes to a TAFKAL80ETC concert') {
+        if (this.items[i].quality > 0) {
+          if (this.items[i].name != 'Sulfuras, Hand of Ragnaros') {
+            this.items[i].quality = this.items[i].quality - 1
+          }
+        }
+      } else {
+        if (this.items[i].quality < 50) {
+          this.items[i].quality = this.items[i].quality + 1
+          if (this.items[i].name == 'Backstage passes to a TAFKAL80ETC concert') {
+            if (this.items[i].sellIn < 11) {
+              if (this.items[i].quality < 50) {
+                this.items[i].quality = this.items[i].quality + 1
+              }
+            }
+            if (this.items[i].sellIn < 6) {
+              if (this.items[i].quality < 50) {
+                this.items[i].quality = this.items[i].quality + 1
+              }
+            }
+          }
+        }
+      }
+      if (this.items[i].name != 'Sulfuras, Hand of Ragnaros') {
+        this.items[i].sellIn = this.items[i].sellIn - 1;
+      }
+      if (this.items[i].sellIn < 0) {
+        if (this.items[i].name != 'Aged Brie') {
+          if (this.items[i].name != 'Backstage passes to a TAFKAL80ETC concert') {
+            if (this.items[i].quality > 0) {
+              if (this.items[i].name != 'Sulfuras, Hand of Ragnaros') {
+                this.items[i].quality = this.items[i].quality - 1
+              }
+            }
+          } else {
+            this.items[i].quality = this.items[i].quality - this.items[i].quality
+          }
+        } else {
+          if (this.items[i].quality < 50) {
+            this.items[i].quality = this.items[i].quality + 1
+          }
+        }
+      }
+    }
+
+    return this.items;
+  }
+}
+                                         
+const items: Array<Item> = []
+
+items.push(new Item('+5 Dexterity Vest', 10, 20));
+items.push(new Item('Aged Brie', 2, 0));
+items.push(new Item('Elixir of the Mongoose', 5, 7));
+items.push(new Item('Sulfuras, Hand of Ragnaros', 0, 80));
+items.push(new Item('Backstage passes to a TAFKAL80ETC concert', 15, 20));
+items.push(new Item('Conjured Mana Cake', 3, 6));
+    
+const gildedRose = new GildedRose(items);
+
+gildedRose.updateQuality();
+```
