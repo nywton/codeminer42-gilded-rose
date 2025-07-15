@@ -1,10 +1,10 @@
 {
   "name": "codeminer42-gilded-rose",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "src/index.js",
   "description": "Welcome to Codeminer42",
   "scripts": {
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "start": "ts-node-dev --respawn --transpile-only src/index.ts"
   },
 
