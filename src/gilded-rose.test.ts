@@ -77,6 +77,7 @@ describe('GildedRose', () => {
         expect(item.quality).toBe(0);
       });
     });
+
   });
 });
 
