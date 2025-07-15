@@ -14,12 +14,6 @@ $ docker compose run --rm test
 # Run and watch main code
 $ docker-compose up app
 ```
-
-### Output
-<img width="1104" height="981" alt="image" src="https://github.com/user-attachments/assets/59fa2568-cadb-45d4-a246-e98848c93f8d" />
-
-
-
 ### For local users
 
 ```bash
@@ -34,6 +28,10 @@ $ npm start
 # Testing
 $ npm test
 ```
+
+### Output
+<img width="1104" height="981" alt="image" src="https://github.com/user-attachments/assets/59fa2568-cadb-45d4-a246-e98848c93f8d" />
+
 
 ## Instructions
 Hi and welcome to team Gilded Rose.
