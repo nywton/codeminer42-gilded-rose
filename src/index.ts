@@ -12,4 +12,12 @@ items.push(new Item('Conjured Mana Cake', 3, 6));
 
 const gildedRose = new GildedRose(items);
 
+console.log('\n🛒 Inventory Quality Report');
+console.log('===========================');
+console.log('\n📦 Before update:\n');
+console.table(gildedRose.items);
+
 gildedRose.updateQuality();
+
+console.log('\n📈 After update:\n');
+console.table(gildedRose.items);

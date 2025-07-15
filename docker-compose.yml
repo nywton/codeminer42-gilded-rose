@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm start
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+
+  test:
+    build: .
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm test

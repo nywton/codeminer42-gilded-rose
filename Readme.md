@@ -5,10 +5,25 @@
 
 ## Run and Test
 
+### For docker users
+
 ```bash
+# Running tests
+$ docker compose run --rm test
+
+# Run and watch main code
+$ docker-compose up app
+```
+
+### For local users
+
+```bash
+node version: v22.14.0
+
 # Install dependencies
 $ npm install
 
+# Run and watch main code
 $ npm start
 
 # Testing
