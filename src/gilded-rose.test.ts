@@ -78,6 +78,22 @@ describe('GildedRose', () => {
       });
     });
 
+    describe('Conjured items', () => {
+      it('degrades twice as fast', () => {
+        const item = new Item('Conjured Mana Cake', 3, 6);
+        const shop = new GildedRose([item]);
+        shop.updateQuality();
+        expect(item.quality).toBe(4);
+      });
+
+      it('degrades twice as fast after sellIn', () => {
+        const item = new Item('Conjured Mana Cake', 0, 6);
+        const shop = new GildedRose([item]);
+        shop.updateQuality();
+        expect(item.quality).toBe(3);
+      });
+    });
+
   });
 });
 
