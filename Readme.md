@@ -3,11 +3,16 @@
 ## The Gilded Rose Original Challenge
 - https://gist.github.com/talyssonoc/77cfd627990b77db5c283f17e1d6eddb
 
-## Run this code
+## Run and Test
 
 ```bash
+# Install dependencies
 $ npm install
+
 $ npm start
+
+# Testing
+$ npm test
 ```
 
 ## Instructions
