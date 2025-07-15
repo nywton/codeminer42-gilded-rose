@@ -16,7 +16,8 @@ $ docker-compose up app
 ```
 
 ### Output
-<img width="1911" height="1004" alt="image" src="https://github.com/user-attachments/assets/42f3c79c-ab83-47da-a2d2-a14d93afded9" />
+<img width="1104" height="981" alt="image" src="https://github.com/user-attachments/assets/59fa2568-cadb-45d4-a246-e98848c93f8d" />
+
 
 
 ### For local users
