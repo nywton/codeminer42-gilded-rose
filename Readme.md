@@ -15,6 +15,10 @@ $ docker compose run --rm test
 $ docker-compose up app
 ```
 
+### Output
+<img width="1911" height="1004" alt="image" src="https://github.com/user-attachments/assets/42f3c79c-ab83-47da-a2d2-a14d93afded9" />
+
+
 ### For local users
 
 ```bash
