@@ -4,7 +4,7 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
-    command: npm start
+    command: sh -c "npm start -- $DAYS_ARG"
     ports:
       - "3000:3000"
     environment:

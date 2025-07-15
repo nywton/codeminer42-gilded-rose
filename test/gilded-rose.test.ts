@@ -1,5 +1,4 @@
-import { GildedRose } from './gilded-rose';
-import { Item } from './item';
+import { GildedRose, Item } from '../src/gilded-rose';
 
 describe('GildedRose', () => {
   describe('updateQuality', () => {

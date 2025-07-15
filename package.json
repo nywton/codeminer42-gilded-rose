@@ -5,7 +5,8 @@
   "description": "Welcome to Codeminer42",
   "scripts": {
     "test": "jest --passWithNoTests",
-    "start": "ts-node-dev --respawn --transpile-only src/index.ts"
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "start": "ts-node-dev --transpile-only src/index.ts"
   },
 
   "keywords": [],

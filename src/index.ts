@@ -1,5 +1,4 @@
-import { GildedRose } from './gilded-rose';
-import { Item } from './item';
+import { GildedRose, Item } from './gilded-rose';
 
 const items: Array<Item> = []
 
@@ -12,12 +11,16 @@ items.push(new Item('Conjured Mana Cake', 3, 6));
 
 const gildedRose = new GildedRose(items);
 
-console.log('\n🛒 Inventory Quality Report');
-console.log('===========================');
-console.log('\n📦 Before update:\n');
-console.table(gildedRose.items);
+let days: number = 2;
 
-gildedRose.updateQuality();
+if (process.argv.length > 2) {
+  days = Number(process.argv[2]);
+}
 
-console.log('\n📈 After update:\n');
-console.table(gildedRose.items);
+for (let i = 0; i < days; i++) {
+  console.log('\n🛒 Inventory Report Day ' + i + '\n');
+  console.log('===========================');
+  console.table(gildedRose.items);
+
+  gildedRose.updateQuality();
+}

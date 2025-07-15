@@ -1,4 +1,6 @@
-import { Item } from './item';
+export class Item {
+  constructor(public name: string, public sellIn: number, public quality: number) { }
+}
 
 export class GildedRose {
   items: Array<Item>;
@@ -13,14 +15,12 @@ export class GildedRose {
         if (this.items[i].quality > 0) {
           if (this.items[i].name != 'Sulfuras, Hand of Ragnaros') {
             if (this.items[i].name.toLowerCase().includes('conjured')) {
-              // `conjured items` degrade twice as fast than a normal item
               this.items[i].quality -= this.items[i].quality > 1 ? 2 : this.items[i].quality;
             } else {
-              // then it's a `normal item`
               this.items[i].quality = this.items[i].quality - 1;
             }
-
           }
+
         }
       } else {
         if (this.items[i].quality < 50) {

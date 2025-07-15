@@ -12,8 +12,11 @@
 # Running tests
 $ docker compose run --rm test
 
-# Run and watch main code
+# Run and watch main code (default days: 2)
 $ docker-compose up app
+
+# For e.g. 3 days:
+$ DAYS_ARG=3 docker compose up app
 ```
 ### For local users
 
@@ -23,8 +26,11 @@ node version: v22.14.0
 # Install dependencies
 $ npm install
 
-# Run and watch main code
+# Run and watch main code (default days: 2)
 $ npm start
+
+# For e.g. 3 days:
+$ npm start 3
 
 # Testing
 $ npm test
