@@ -29,7 +29,10 @@ describe('GildedRose', () => {
         const item = new Item('Elixir of the Mongoose', 0, 6);
         const shop = new GildedRose([item]);
         shop.updateQuality();
-        expect(item.quality).toBe(4);
+        expect(item.quality).toBe(5);
+        expect(item.sellIn).toBe(-1);
+        shop.updateQuality();
+        expect(item.quality).toBe(3);
       });
     });
 
@@ -89,7 +92,9 @@ describe('GildedRose', () => {
         const item = new Item('Conjured Mana Cake', 0, 6);
         const shop = new GildedRose([item]);
         shop.updateQuality();
-        expect(item.quality).toBe(3);
+        expect(item.quality).toBe(4);
+        shop.updateQuality();
+        expect(item.quality).toBe(0);
       });
     });
 
