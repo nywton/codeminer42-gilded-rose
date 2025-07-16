@@ -1,8 +1,6 @@
 # Welcome to the Codeminer42 - Gilded Rose
-<img width="1104" height="981" alt="image" src="https://github.com/user-attachments/assets/59fa2568-cadb-45d4-a246-e98848c93f8d" />
+<img width="994" height="882" alt="image" src="https://github.com/user-attachments/assets/4ebb9208-b543-4635-a1b8-532fc18e904e" />
 
-## The Gilded Rose Original Challenge
-- https://gist.github.com/talyssonoc/77cfd627990b77db5c283f17e1d6eddb
 
 ## Run and Test
 
