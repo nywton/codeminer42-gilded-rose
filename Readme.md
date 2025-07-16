@@ -1,4 +1,4 @@
-# Welcome to the Codeminer42 - Gilded Rose
+Codeminer42 - Gilded Rose
 <img width="994" height="882" alt="image" src="https://github.com/user-attachments/assets/4ebb9208-b543-4635-a1b8-532fc18e904e" />
 
 
