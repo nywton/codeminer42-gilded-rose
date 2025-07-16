@@ -32,6 +32,9 @@ $ npm start 3
 
 # Testing
 $ npm test
+
+# Watch files changes
+$ npm test:watch
 ```
 
 
